@@ -1,0 +1,21 @@
+uuid: 4b40acaf-b162-4a08-b500-552fed7fb0c0
+langcode: fr
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - ceps
+id: searchform
+theme: ceps
+region: search_box
+weight: 0
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form'
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility: {  }

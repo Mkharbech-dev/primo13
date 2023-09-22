@@ -1,0 +1,22 @@
+uuid: cd7d4a2a-9725-4687-9510-f293e6c89367
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ceps
+_core:
+  default_config_hash: cL11xuvgbDwRtGEQLBQ0vuywqHSwOo9oXtztdmgiTfk
+id: ceps_breadcrumbs
+theme: ceps
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

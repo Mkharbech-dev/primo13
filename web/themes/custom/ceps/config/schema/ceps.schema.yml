@@ -1,0 +1,5 @@
+# Schema for the configuration files of the CEPS theme.
+
+ceps.settings:
+  type: theme_settings
+  label: 'CEPS settings'

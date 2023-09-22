@@ -1,0 +1,37 @@
+name: CEPS
+type: theme
+base theme: false
+description: 'Based on <a href="https://demo2.drupar.com/tara">TARA</a> Drupal front-end theme.'
+package: CCAS-CEPS
+version: "10.x-1.0"
+core_version_requirement: ^9 || ^10
+libraries:
+  - ceps/global-styling
+regions:
+  header: Header
+  header_top: 'Header Top'
+  site_branding: 'Site Branding'
+  search_box: 'Full Page Search'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+  hero: 'Hero (full width)'
+  highlighted: Highlighted
+  breadcrumb: Breadcrumb
+  social: Social Bar
+  content_above: Content Above
+  content: Content
+  content_top: 'Content Top'
+  content_bottom: 'Content Bottom'
+  content_home: 'Homepage Content'
+  content_below: 'Content Below'
+  sidebar_first: 'Sidebar Left'
+  sidebar_second: 'Sidebar Right'
+  footer_first: 'Footer first'
+  footer_second: 'Footer second'
+  footer_third: 'Footer third'
+  footer_fourth: 'Footer fourth'
+  hidden_blocks: 'Hidden Blocks'
+  footer_top: 'Footer Top'
+  footer_bottom: 'Footer Bottom'

@@ -1,0 +1,22 @@
+uuid: fc251923-49f4-4d0e-9859-a8a2f0f89fd4
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ceps
+_core:
+  default_config_hash: 7W5m1cGZjEB4_o0Di0lrmtWuUx1Wft0TuAVyUSgPUwQ
+id: ceps_content
+theme: ceps
+region: content
+weight: -6
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

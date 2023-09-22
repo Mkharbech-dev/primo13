@@ -1,0 +1,125 @@
+<?php
+
+/**
+ * @file
+ * Contains CEPS theme override and preprocess functions.
+ */
+use Drupal\file\Entity\File;
+/**
+ * Sanitise input urls.
+ */
+function santise_val_url($url) {
+  if ($url != '') {
+
+    // Sanitise (remove all illegal characters) from url.
+    $url = filter_var($url, FILTER_SANITIZE_URL);
+
+    // Validate url.
+    if (filter_var($url, FILTER_VALIDATE_URL) == TRUE) {
+      $url = $url;
+    } else {
+      $url = '#';
+    }
+    return $url;
+  }
+}
+
+/* *
+ * CEPS page preprocess.
+ * Define variables for theme settings.
+ */
+function ceps_preprocess_page(array &$variables) {
+  $config = \Drupal::config('system.site');
+  $variables['site_name'] = $config->get('name');
+  $variables['site_slogan'] = $config->get('slogan');
+  $variables['slider_show'] = theme_get_setting('slider_show', 'ceps');
+  $variables['slider_code'] = theme_get_setting('slider_code', 'ceps');
+  $variables['all_icons_show'] = theme_get_setting('all_icons_show', 'ceps');
+  $variables['only_header_icons_show'] = theme_get_setting('only_header_icons_show', 'ceps');
+  $variables['only_footer_icons_show'] = theme_get_setting('only_footer_icons_show', 'ceps');
+  $variables['big_menu_show'] = theme_get_setting('big_menu_show', 'ceps');
+  $variables['facebook_url'] = santise_val_url(theme_get_setting('facebook_url', 'ceps'));
+  $variables['twitter_url'] = santise_val_url(theme_get_setting('twitter_url', 'ceps'));
+  $variables['instagram_url'] = santise_val_url(theme_get_setting('instagram_url', 'ceps'));
+  $variables['linkedin_url'] = santise_val_url(theme_get_setting('linkedin_url', 'ceps'));
+  $variables['youtube_url'] = santise_val_url(theme_get_setting('youtube_url', 'ceps'));
+  $variables['vimeo_url'] = santise_val_url(theme_get_setting('vimeo_url', 'ceps'));
+  $variables['whatsapp_url'] = santise_val_url(theme_get_setting('whatsapp_url', 'ceps'));
+  $variables['github_url'] = santise_val_url(theme_get_setting('github_url', 'ceps'));
+  $variables['telegram_url'] = santise_val_url(theme_get_setting('telegram_url', 'ceps'));
+  $variables['scrolltotop_on'] = theme_get_setting('scrolltotop_on', 'ceps');
+  $variables['front_sidebar'] = theme_get_setting('front_sidebar', 'ceps');
+  $variables['bootstrapicons'] = theme_get_setting('bootstrapicons');
+  $variables['copyright_text'] = theme_get_setting('copyright_text', 'ceps');
+  $variables['copyright_text_custom'] = theme_get_setting('copyright_text_custom', 'ceps');
+  $variables['enable_copyright_text_custom'] = theme_get_setting('enable_copyright_text_custom', 'ceps');
+  $variables['enable_custom_header'] = theme_get_setting('enable_custom_header', 'ceps');
+  $variables['custom_page_header'] = theme_get_setting('custom_page_header', 'ceps');
+  $variables['head_custom_code'] = theme_get_setting('head_custom_code', 'ceps');
+}
+
+/* *
+ * Node preprocess.
+ */
+function ceps_preprocess_node(array &$variables) {
+  $variables['node_author_pic'] = theme_get_setting('node_author_pic', 'ceps');
+  $variables['node_tags'] = theme_get_setting('node_tags', 'ceps');
+}
+
+/* *
+ * Comment preprocess.
+ */
+function ceps_preprocess_comment(array &$variables) {
+  $variables['comment_user_pic'] = theme_get_setting('comment_user_pic', 'ceps');
+}
+
+/**
+ * Html preprocess for CEPS theme.
+ * Adds body classes if certain regions have content.
+ * Used for creating different page layout.
+ */
+function ceps_preprocess_html(&$variables) {
+  $variables['base_path'] = base_path();
+  $variables['google_font'] = theme_get_setting('google_font', 'ceps');
+  // Add variables for theme Settings
+  $variables['enable_custom_header'] = theme_get_setting('enable_custom_header', 'ceps');
+  $variables['custom_page_header'] = theme_get_setting('custom_page_header', 'ceps');
+  $variables['head_custom_code'] = theme_get_setting('head_custom_code', 'ceps');
+  $variables['css_extra'] = theme_get_setting('css_extra', 'ceps');
+  $variables['css_code'] = theme_get_setting('css_code', 'ceps');
+  $variables['slider_show'] = theme_get_setting('slider_show', 'ceps');
+  $variables['slider_time'] = theme_get_setting('slider_time', 'ceps');
+  $variables['slider_dots'] = theme_get_setting('slider_dots', 'ceps');
+  $variables['slider_nav'] = theme_get_setting('slider_nav', 'ceps');
+  $variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
+  /* Slider image */
+  $variables['slider_image'] = theme_get_setting('slider_image', 'ceps');
+  $slider_image_id = theme_get_setting('slider_image', 'ceps');
+  if(!empty($slider_image_id)) {
+    $slider_image_file = File::load($slider_image_id[0]);
+    $slider_image_file->setPermanent();
+    $slider_image_file->save();
+    $slider_image_file_usage = \Drupal::service('file.usage');
+    $slider_image_file_usage->add($slider_image_file, 'ceps', 'theme', $slider_image_id[0]);
+  };
+  if(!empty($slider_image_file)) {
+    $imageuri = $slider_image_file->getFileUri();
+    $variables['slider_image_path'] = \Drupal::service('file_url_generator')->generateAbsoluteString($imageuri);
+  };
+}
+
+/* *
+ * Add current page to breadcrumb.
+ */
+function ceps_preprocess_breadcrumb(&$variables) {
+  $request = \Drupal::request();
+  $route_match = \Drupal::routeMatch();
+  $page_title = \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject());
+  if (!empty($page_title)) {
+    $variables['breadcrumb'][] = [
+      'text' => $page_title,
+    ];
+    // Add cache context based on url.
+    $variables['#cache']['contexts'][] = 'url';
+  }
+}

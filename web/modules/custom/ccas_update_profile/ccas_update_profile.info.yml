@@ -1,0 +1,7 @@
+name: Update Profile
+type: module
+description: 'Permet la modification de données bénéficiaire avec les conjoint et ayant droit.'
+package: ceps
+core_version_requirement: ^9 || ^10
+version: '1.0.0'
+project: 'CEPS'

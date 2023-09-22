@@ -1,0 +1,22 @@
+uuid: 20e65c3f-a98e-4e83-bb33-482d3f81161f
+langcode: fr
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - ceps
+_core:
+  default_config_hash: iyuQj9HP7TudJqR2BDGoGXEn16NE3m1KUtCw0N5ZTMM
+id: ceps_help
+theme: ceps
+region: content
+weight: -9
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

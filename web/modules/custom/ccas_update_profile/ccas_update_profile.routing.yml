@@ -1,0 +1,8 @@
+ccas_update_profile.multistep_update_profile_form:
+  path: '/forms/update-profile'
+  defaults:
+    _form: '\Drupal\ccas_update_profile\Form\UpdateProfile'
+    _title: 'Consulter / Modifier mes informations personnelles'
+  requirements:
+    _permission: 'access content'
+  

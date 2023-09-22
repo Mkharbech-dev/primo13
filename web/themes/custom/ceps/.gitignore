@@ -1,0 +1,13 @@
+/.idea
+/vendor/
+/data/
+/web/core/
+/web/modules/contrib/
+/web/themes/contrib/
+/web/sites/default/settings.php
+/web/sites/default/settings.local.php
+/web/sites/default/files/
+/default_conf
+
+
+
