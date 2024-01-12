@@ -1,4 +1,4 @@
-uuid: 8d97956a-0be3-4d85-bf15-2f4f6064af53
+uuid: 23feef7b-576c-4445-9f74-93f2485b286a
 langcode: fr
 status: false
 dependencies:
@@ -10,7 +10,7 @@ dependencies:
 _core:
   default_config_hash: ko9GznzNBXHkuz09OCaBQ1YOSJYYjTY0TBpNV3WKnog
 id: archive
-label: Archive
+label: Archiver
 module: node
 description: 'Tous les contenus, triés par mois.'
 tag: default
@@ -19,7 +19,7 @@ base_field: nid
 display:
   default:
     id: default
-    display_title: Default
+    display_title: 'Par défaut'
     display_plugin: default
     position: 0
     display_options:
@@ -37,19 +37,19 @@ display:
             previous: ‹‹
           expose:
             items_per_page: false
-            items_per_page_label: 'Items per page'
+            items_per_page_label: 'Éléments par page'
             items_per_page_options: '5, 10, 25, 50'
             items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
+            items_per_page_options_all_label: '- Tout -'
             offset: false
-            offset_label: Offset
+            offset_label: Décalage
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
+          submit_button: Appliquer
           reset_button: false
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          reset_button_label: Réinitialiser
+          exposed_sorts_label: 'Trier par'
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc

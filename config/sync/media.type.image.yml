@@ -1,4 +1,4 @@
-uuid: b6aa4123-4380-42d2-8d32-9e738136c9a7
+uuid: c0f63a2e-de0f-463b-ad99-34a1a20b489a
 langcode: fr
 status: true
 dependencies: {  }
@@ -6,7 +6,7 @@ _core:
   default_config_hash: 6Qope5wG7HUpV0tPOBMtDI_GZkHFcF1Xj4hgD9Cu_hM
 id: image
 label: Image
-description: 'Use local images for reusable media.'
+description: 'Utiliser des images locales en tant que média réutilisable.'
 source: image
 queue_thumbnail_downloads: false
 new_revision: true

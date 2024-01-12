@@ -1,4 +1,4 @@
-uuid: 41ef1816-85cd-4f4f-9382-42e9a2226171
+uuid: 8b938eb3-6411-4340-aba5-628927771cf6
 langcode: fr
 status: true
 dependencies:
@@ -9,7 +9,7 @@ dependencies:
     - node
     - user
 _core:
-  default_config_hash: XEFoA1ECJzKZN4VpnDqqRQO-oltuYdmjjvGEYDKs8uU
+  default_config_hash: 6eeliKIydPjqyv5V__QqTfahvJMWkHjOVUUuUIdB1ik
 id: frontpage
 label: 'Page d''accueil'
 module: node
@@ -20,7 +20,7 @@ base_field: nid
 display:
   default:
     id: default
-    display_title: Default
+    display_title: 'Par défaut'
     display_plugin: default
     position: 0
     display_options:
@@ -34,26 +34,26 @@ display:
           total_pages: 0
           id: 0
           tags:
-            next: 'Next ›'
-            previous: '‹ Previous'
-            first: '« First'
-            last: 'Last »'
+            next: 'Suivant ›'
+            previous: '‹ Précédent'
+            first: '« Premier'
+            last: 'Dernier »'
           expose:
             items_per_page: false
-            items_per_page_label: 'Items per page'
+            items_per_page_label: 'Éléments par page'
             items_per_page_options: '5, 10, 25, 50'
             items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
+            items_per_page_options_all_label: '- Tout -'
             offset: false
-            offset_label: Offset
+            offset_label: Décalage
           quantity: 9
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
+          submit_button: Appliquer
           reset_button: false
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          reset_button_label: Réinitialiser
+          exposed_sorts_label: 'Trier par'
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
@@ -98,7 +98,7 @@ display:
           plugin_id: title
           label: ''
           empty: true
-          title: 'Bienvenue sur [site:name]'
+          title: 'Bienvenue !'
       sorts:
         sticky:
           id: sticky

@@ -1,4 +1,4 @@
-uuid: 2903568e-e0f4-48cb-acf5-771cec3c4906
+uuid: 45216e98-6b32-4cad-b7db-ad98565e8c65
 langcode: fr
 status: true
 dependencies:
@@ -10,7 +10,7 @@ dependencies:
   module:
     - image
 _core:
-  default_config_hash: I5UTk5ubfYtD3-bkArNVwSyFASGkM7D3OATxRwID9I4
+  default_config_hash: YcWqjhIlo-2RZUM5ogvRsrKB7M3voF2XB3lVLwgOlLU
 id: media.document.media_library
 targetEntityType: media
 bundle: document
@@ -32,5 +32,4 @@ hidden:
   field_media_document: true
   langcode: true
   name: true
-  search_api_excerpt: true
   uid: true

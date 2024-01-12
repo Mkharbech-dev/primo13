@@ -1,4 +1,4 @@
-uuid: fae2b1e9-cf8c-47f5-a291-85159fe51d63
+uuid: 62b2396e-50d7-4e8a-864c-8b492e629461
 langcode: fr
 status: true
 dependencies:
@@ -8,7 +8,7 @@ dependencies:
 _core:
   default_config_hash: 7qJqToD1OQLAyeswpmg7M0LRxQlw1URQkJDWUJCnmR8
 name: media_library
-label: 'Media Library thumbnail (220×220)'
+label: 'Vignette de la médiathèque (220x220)'
 effects:
   75b076a8-1234-4b42-85db-bf377c4d8d5f:
     uuid: 75b076a8-1234-4b42-85db-bf377c4d8d5f

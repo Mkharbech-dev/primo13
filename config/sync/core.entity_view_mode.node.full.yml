@@ -1,4 +1,4 @@
-uuid: b439e464-01e9-4b22-a538-3a0b76fa80d3
+uuid: 878e74e4-6f36-4e36-8951-8a2c3b9afaae
 langcode: fr
 status: false
 dependencies:
@@ -7,6 +7,6 @@ dependencies:
 _core:
   default_config_hash: ElrtInxGjZd7GaapJ5O9n-ugi2hG2IxFivtgn0tHOsk
 id: node.full
-label: 'Full content'
+label: 'Contenu complet'
 targetEntityType: node
 cache: true

@@ -1,4 +1,4 @@
-uuid: 09385db7-8445-4640-8ceb-5fceb01179e8
+uuid: 756546de-df7d-49f5-add8-20aaca9104b2
 langcode: fr
 status: true
 dependencies:
@@ -13,7 +13,7 @@ id: media.audio.field_media_audio_file
 field_name: field_media_audio_file
 entity_type: media
 bundle: audio
-label: 'Audio file'
+label: 'Fichier audio'
 description: ''
 required: true
 translatable: true

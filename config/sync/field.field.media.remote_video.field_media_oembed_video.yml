@@ -1,4 +1,4 @@
-uuid: c12c262b-dcc2-4df1-9621-d785b0effe54
+uuid: fae54c9e-7803-45cb-a39b-2b281676ccbe
 langcode: fr
 status: true
 dependencies:
@@ -11,7 +11,7 @@ id: media.remote_video.field_media_oembed_video
 field_name: field_media_oembed_video
 entity_type: media
 bundle: remote_video
-label: 'Video URL'
+label: 'URL de la vidéo'
 description: ''
 required: true
 translatable: true

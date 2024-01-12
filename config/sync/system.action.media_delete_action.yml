@@ -1,4 +1,4 @@
-uuid: 0f9c0378-f93e-4ecd-a77d-eb12e5caf8f3
+uuid: 9861490f-0ab8-4a4a-a1b7-d6da1e68813c
 langcode: fr
 status: true
 dependencies:
@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: FrZy1tmuXJcOxhXlBoI1Hsnen5TT-9OCC1iolWH84go
 id: media_delete_action
-label: 'Delete media'
+label: 'Suppression de média'
 type: media
 plugin: 'entity:delete_action:media'
 configuration: {  }

@@ -1,4 +1,4 @@
-uuid: c997b8fe-9044-4080-81b3-2dedd09f79b5
+uuid: cecf8fab-c1d0-474b-ac13-2f5872350111
 langcode: fr
 status: true
 dependencies:
@@ -18,7 +18,7 @@ base_field: cid
 display:
   default:
     id: default
-    display_title: Default
+    display_title: 'Par défaut'
     display_plugin: default
     position: 0
     display_options:

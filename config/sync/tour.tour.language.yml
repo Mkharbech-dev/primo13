@@ -1,4 +1,4 @@
-uuid: f20e7b73-de1a-442d-8508-e9b3b28dcb6f
+uuid: 0d0fc7fc-2f2b-4643-b353-478ea3b301c3
 langcode: fr
 status: true
 dependencies:
@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: Okz8QMYRGvq95nqLGYjp8gLiy93DKoMEzEVZVwEeg4M
 id: language
-label: Language
+label: Langue
 module: language
 routes:
   -
