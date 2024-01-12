@@ -37,7 +37,8 @@ use Drupal\Core\Entity\EntityStorageInterface;
  * "revision_log_message" = "revision_log"
  * },
  * handlers = {
- * "access" = "Drupal\offer\OfferAccessControlHandler",
+ *  "access" = "Drupal\offer\OfferAccessControlHandler",
+ *  "views_data" = "Drupal\offer\OfferViewsData",
  *  "form" = {
  *  "add" = "Drupal\offer\Form\OfferForm",
  *  "edit" = "Drupal\offer\Form\OfferForm",

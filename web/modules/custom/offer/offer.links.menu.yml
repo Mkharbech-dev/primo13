@@ -1,0 +1,10 @@
+offer.toolbar.my_offers:
+  title: 'My offers'
+  route_name: entity.offer.collection
+  parent: system.admin
+  weight: 99
+offer.toolbar.page_homme:
+  title: 'Accueil'
+  parent: system.admin
+  route_name: offer.home_page
+  weight: 98
