@@ -3,8 +3,16 @@ offer.toolbar.my_offers:
   route_name: entity.offer.collection
   parent: system.admin
   weight: 99
+
 offer.toolbar.page_homme:
   title: 'Accueil'
   parent: system.admin
   route_name: offer.home_page
   weight: 98
+
+offer.admin.structure.settings:
+  title: 'Offer settings'
+  description: 'Configure Offer entity'
+  route_name: entity.offer.settings
+  parent: system.admin_structure
+

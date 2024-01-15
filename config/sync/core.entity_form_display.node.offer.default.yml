@@ -1,11 +1,14 @@
-uuid: 50ca08b7-85ce-4373-8ac6-f38d78f200a3
+uuid: 1c90c6db-72eb-4d78-878d-07199087809c
 langcode: fr
 status: true
 dependencies:
   config:
     - field.field.node.offer.body
+    - field.field.node.offer.field_image
+    - image.style.thumbnail
     - node.type.offer
   module:
+    - image
     - path
     - text
 id: node.offer.default
@@ -28,6 +31,14 @@ content:
     weight: 10
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_image:
+    type: image_image
+    weight: 122
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
     third_party_settings: {  }
   langcode:
     type: language_select

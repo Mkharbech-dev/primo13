@@ -1,11 +1,13 @@
-uuid: 886334c2-4b2f-4657-b37b-00f9a538f82f
+uuid: cf86116e-35ca-424c-bfc0-83b96b8f99b9
 langcode: fr
 status: true
 dependencies:
   config:
     - field.field.node.offer.body
+    - field.field.node.offer.field_image
     - node.type.offer
   module:
+    - image
     - text
     - user
 id: node.offer.default
@@ -19,6 +21,17 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 101
+    region: content
+  field_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 102
     region: content
   links:
     settings: {  }

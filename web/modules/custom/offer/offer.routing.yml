@@ -34,3 +34,10 @@ offer.home_page:
   path: '/'
   defaults:
     _title: 'Accueil'
+entity.offer.settings:
+  path: '/admin/structure/offer'
+  defaults:
+    _form: '\Drupal\offer\Form\OfferSettingsForm'
+    _title: 'Offer settings'
+  requirements:
+    _permission: 'administer own offers'

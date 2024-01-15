@@ -6,7 +6,7 @@ dependencies:
     - offer
     - user
 _core:
-  default_config_hash: 6QOPYs6aqq2yOAvQXaOQVI0D8NbTw2b0yLUxliD_3WE
+  default_config_hash: mC2nDEDzl162StUP7xmKjCaDNoqpJ1whV9vhKiKSJd4
 id: offres
 label: offres
 module: views

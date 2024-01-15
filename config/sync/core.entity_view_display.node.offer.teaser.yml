@@ -1,10 +1,11 @@
-uuid: 6aa88b86-e18d-44b6-a67c-2ec7978a44d5
+uuid: dfdb661b-3911-4806-9a0e-0d3a5e523b19
 langcode: fr
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.offer.body
+    - field.field.node.offer.field_image
     - node.type.offer
   module:
     - text
@@ -28,4 +29,5 @@ content:
     weight: 100
     region: content
 hidden:
+  field_image: true
   langcode: true

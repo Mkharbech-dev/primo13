@@ -4,13 +4,12 @@ status: true
 dependencies:
   config:
     - filter.format.basic_html
-    - node.type.offer
   module:
     - comment
     - contact
     - filter
     - media
-    - node
+    - offer
     - search
     - shortcut
     - system
@@ -25,12 +24,8 @@ permissions:
   - 'access content'
   - 'access shortcuts'
   - 'access site-wide contact form'
-  - 'create offer content'
-  - 'delete any offer content'
-  - 'delete offer revisions'
-  - 'delete own offer content'
-  - 'edit any offer content'
-  - 'edit own offer content'
+  - 'administer own offers'
+  - 'create media'
   - 'post comments'
   - 'search content'
   - 'skip comment approval'
