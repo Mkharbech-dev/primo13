@@ -1,0 +1,52 @@
+uuid: d02dbf66-2037-4434-9f04-cf976c39a599
+langcode: fr
+status: true
+dependencies:
+  module:
+    - content_moderation
+    - offer
+id: offer_workflow
+label: 'Offer workflow'
+type: content_moderation
+type_settings:
+  states:
+    draft:
+      label: Brouillon
+      weight: 0
+      published: false
+      default_revision: false
+    expire:
+      label: Expired
+      weight: 2
+      published: true
+      default_revision: false
+    published:
+      label: Publié(e)
+      weight: 1
+      published: true
+      default_revision: true
+  transitions:
+    create_new_draft:
+      label: 'Create New Draft'
+      from:
+        - draft
+        - published
+      to: draft
+      weight: 0
+    expired:
+      label: 'Make expired'
+      from:
+        - published
+      to: expire
+      weight: 2
+    publish:
+      label: Publish
+      from:
+        - draft
+        - published
+      to: published
+      weight: 1
+  entity_types:
+    offer:
+      - offer
+  default_moderation_state: draft

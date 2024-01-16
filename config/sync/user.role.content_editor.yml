@@ -2,8 +2,11 @@ uuid: 9c123898-6858-4f12-9b95-24c38f73c9d7
 langcode: fr
 status: true
 dependencies:
+  config:
+    - workflows.workflow.offer_workflow
   module:
     - comment
+    - content_moderation
     - contextual
     - file
     - path
@@ -25,4 +28,7 @@ permissions:
   - 'administer url aliases'
   - 'create url aliases'
   - 'edit own comments'
+  - 'use offer_workflow transition create_new_draft'
+  - 'use offer_workflow transition expired'
+  - 'use offer_workflow transition publish'
   - 'view the administration theme'

@@ -22,29 +22,35 @@ class OfferAccessControlHandler extends EntityAccessControlHandler {
     $access = AccessResult::forbidden();
     switch ($operation) {
       case 'view':
-        if ($account->hasPermission('administer own offers')) {
-          $access = AccessResult::allowedIf($account->id() ==
+        // draft
+        if($entity->get('moderation_state')->getString() == 'draft') {
+          if ($account->hasPermission('administer own offers')) {
+            $access = AccessResult::allowedIf($account->id() ==
             $entity->getOwnerId())->cachePerUser()->addCacheableDependency($entity);
+          }
+        } else {
+          // published, expired
+          $access = AccessResult::allowed()->addCacheableDependency($entity);
         }
         break;
       case 'update': // Shows the edit buttons in operations
         if ($account->hasPermission('administer own offers')) {
           $access = AccessResult::allowedIf($account->id() ==
-            $entity->getOwnerId())->cachePerUser()->addCacheableDependency($entity);
+          $entity->getOwnerId())->cachePerUser()->addCacheableDependency($entity);
         }
         break;
       case 'edit': // Lets me in on the edit-page of the entity
         if ($account->hasPermission('administer own offers')) {
           $access = AccessResult::allowedIf($account->id() ==
-            $entity->getOwnerId())->cachePerUser()->addCacheableDependency($entity);
+          $entity->getOwnerId())->cachePerUser()->addCacheableDependency($entity);
         }
         break;
       case 'delete': // Shows the delete buttons + access to delete this entity
-if ($account->hasPermission('administer own offers')) {
-  $access = AccessResult::allowedIf($account->id() ==
-    $entity->getOwnerId())->cachePerUser()->addCacheableDependency($entity);
-}
-break;
+        if ($account->hasPermission('administer own offers')) {
+          $access = AccessResult::allowedIf($account->id() ==
+          $entity->getOwnerId())->cachePerUser()->addCacheableDependency($entity);
+        }
+        break;
     }
     return $access;
   }

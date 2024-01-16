@@ -76,7 +76,8 @@ display:
           hide_alter_empty: true
           click_sort_column: value
           type: string
-          settings: {  }
+          settings:
+            link_to_entity: true
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -254,20 +255,7 @@ display:
           validate_options: {  }
           break_phrase: false
           not: false
-      filters:
-        status:
-          id: status
-          table: offer
-          field: status
-          entity_type: offer
-          entity_field: status
-          plugin_id: boolean
-          value: '1'
-          group: 1
-          expose:
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
+      filters: {  }
       style:
         type: table
       row:
