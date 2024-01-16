@@ -1,0 +1,58 @@
+uuid: 2b132daf-8a2a-4386-bdb1-4a99e18f6b9f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.offer.offer.field_description
+    - field.field.offer.offer.field_image
+    - field.field.offer.offer.field_offer_type
+    - field.field.offer.offer.field_prix
+    - image.style.thumbnail
+  module:
+    - image
+    - offer
+    - text
+id: offer.offer.default
+targetEntityType: offer
+bundle: offer
+mode: default
+content:
+  field_description:
+    type: text_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_image:
+    type: image_image
+    weight: 4
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_offer_type:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_prix:
+    type: number
+    weight: 1
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  user_id: true
