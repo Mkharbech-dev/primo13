@@ -11,6 +11,14 @@ class OfferViewsData extends EntityViewsData {
    */
   public function getViewsData() {
     $data = parent::getViewsData();
+    $data['offer']['offer_entity_moderation_state_views_field'] = [
+      'title' => t('Moderation status'),
+      'field' => array(
+        'title' => t('Moderation status'),
+        'help' => t('Voir le statut de entitié offer.'),
+        'id' => 'offer_entity_moderation_state_views_field',
+      ),
+    ];
     return $data;
   }
 }
