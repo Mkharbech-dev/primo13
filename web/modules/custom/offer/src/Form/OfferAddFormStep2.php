@@ -22,7 +22,7 @@ class OfferAddFormStep2 extends ContentEntityForm {
   public function buildForm(array $form, FormStateInterface $form_state) {
     /* @var $entity \Drupal\offer\Entity\Offer */
     $form = parent::buildForm($form, $form_state);
-    $form['actions']['submit']['#value'] = t('Save and proceed');
+    $form['actions']['submit']['#value'] = t('Enregistrer et Continuer');
     return $form;
   }
 

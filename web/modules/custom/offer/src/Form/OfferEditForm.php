@@ -14,7 +14,7 @@ use Drupal\Core\Form\FormStateInterface;
  *
  * @ingroup content_entity_example
  */
-class OfferForm extends ContentEntityForm {
+class OfferEditForm extends ContentEntityForm {
 
   /**
    * {@inheritdoc}

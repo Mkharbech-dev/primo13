@@ -22,7 +22,7 @@ class OfferAddFormStep3 extends ContentEntityForm {
   public function buildForm(array $form, FormStateInterface $form_state) {
     /* @var $entity \Drupal\offer\Entity\Offer */
     $form = parent::buildForm($form, $form_state);
-    $form['actions']['submit']['#value'] = t('Save and proceed');
+    $form['actions']['submit']['#value'] = t('Enregistrer');
     return $form;
   }
 
@@ -32,7 +32,7 @@ class OfferAddFormStep3 extends ContentEntityForm {
   public function save(array $form, FormStateInterface $form_state) {
     // Redirect to offer overview after save.
     $form_state->setRedirect('entity.offer.collection');
-    \Drupal::messenger()->addMessage('Your offer was created. Click the publish button to start earning.');
+    \Drupal::messenger()->addMessage('Votre offre a été crée. Cliquez sur le bouton de publication pour le publier.');
     $entity = $this->getEntity();
     $entity->save();
   }

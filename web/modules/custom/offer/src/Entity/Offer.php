@@ -44,7 +44,7 @@ use Drupal\Core\Entity\EntityStorageInterface;
  *   "step_1" = "Drupal\offer\Form\OfferAddFormStep1",
  *   "step_2" = "Drupal\offer\Form\OfferAddFormStep2",
  *   "step_3" = "Drupal\offer\Form\OfferAddFormStep3",
- *  "edit" = "Drupal\offer\Form\OfferForm",
+ *  "edit" = "Drupal\offer\Form\OfferEditForm",
  *  "delete" = "Drupal\offer\Form\OfferDeleteForm",
  *   }
  *  },
