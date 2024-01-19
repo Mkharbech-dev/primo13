@@ -1,66 +1,43 @@
-uuid: 2b132daf-8a2a-4386-bdb1-4a99e18f6b9f
+uuid: 69d30840-36b6-47b7-8c48-c5342b25ca16
 langcode: fr
 status: true
 dependencies:
   config:
+    - core.entity_form_mode.offer.step_3
     - field.field.offer.offer.field_description
     - field.field.offer.offer.field_image
     - field.field.offer.offer.field_offer_type
     - field.field.offer.offer.field_prix
-    - image.style.thumbnail
     - workflows.workflow.offer_workflow
   module:
     - content_moderation
-    - image
     - offer
-    - text
-id: offer.offer.default
+id: offer.offer.step_3
 targetEntityType: offer
 bundle: offer
-mode: default
+mode: step_3
 content:
-  field_description:
-    type: text_textarea
-    weight: 3
-    region: content
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-  field_image:
-    type: image_image
-    weight: 4
-    region: content
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
   field_offer_type:
     type: options_buttons
-    weight: 1
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
   field_prix:
     type: number
-    weight: 2
+    weight: 1
     region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 5
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
-  title:
-    type: string_textfield
-    weight: 0
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
 hidden:
+  field_description: true
+  field_image: true
+  title: true
   user_id: true

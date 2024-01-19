@@ -26,8 +26,7 @@ class OfferDeleteForm extends ContentEntityConfirmFormBase {
    * If the delete command is canceled, return to the offer.
    */
   public function getCancelUrl() {
-    return Url::fromRoute('entity.offer.edit_form', ['offer' =>
-      $this->entity->id()]);
+    return Url::fromRoute('entity.offer.collection', ['offer' => $this->entity->id()]);
   }
   /**
    * {@inheritdoc}
@@ -40,8 +39,7 @@ class OfferDeleteForm extends ContentEntityConfirmFormBase {
    *
    * Delete the entity
    */
-  public function submitForm(array &$form, FormStateInterface
-                                   $form_state) {
+  public function submitForm(array &$form, FormStateInterface $form_state) {
     $entity = $this->getEntity();
     $entity->delete();
     $this->logger('offer')->notice('deleted %title.',

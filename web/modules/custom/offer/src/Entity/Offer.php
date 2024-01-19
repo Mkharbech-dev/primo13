@@ -41,6 +41,9 @@ use Drupal\Core\Entity\EntityStorageInterface;
  *  "views_data" = "Drupal\offer\OfferViewsData",
  *  "form" = {
  *  "add" = "Drupal\offer\Form\OfferForm",
+ *   "step_1" = "Drupal\offer\Form\OfferAddFormStep1",
+ *   "step_2" = "Drupal\offer\Form\OfferAddFormStep2",
+ *   "step_3" = "Drupal\offer\Form\OfferAddFormStep3",
  *  "edit" = "Drupal\offer\Form\OfferForm",
  *  "delete" = "Drupal\offer\Form\OfferDeleteForm",
  *   }
@@ -136,5 +139,26 @@ class Offer extends EditorialContentEntityBase {
    */
   public function getOwnerId() {
     return $this->get('user_id')->target_id;
+  }
+
+  /**
+   * Returns a promotext (fixed, for now!)
+   * @return string
+   */
+  public function getPromoText() {
+    return 'Soyez le premier!';
+  }
+  /**
+   * Renvoie  field_prix
+   * @return string
+   */
+  public function getPriceAmount() {
+    switch($this->get('field_offer_type')->getString()) {
+      case 'with_minimum':
+        return $this->get('field_prix')->getString() . '$';
+      case 'no_minimum':
+        return 'Start bidding at 0$';
+    }
+    return '';
   }
 }

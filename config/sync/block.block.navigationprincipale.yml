@@ -1,6 +1,6 @@
 uuid: abcf740c-adfa-40f2-a23d-e51151f8fcc1
 langcode: fr
-status: true
+status: false
 dependencies:
   config:
     - system.menu.main

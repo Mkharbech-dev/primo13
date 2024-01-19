@@ -1,0 +1,10 @@
+uuid: ee6b3ef2-df24-4572-b752-cf37a547b32c
+langcode: fr
+status: true
+dependencies:
+  module:
+    - offer
+id: offer.step_1
+label: Step_1
+targetEntityType: offer
+cache: true

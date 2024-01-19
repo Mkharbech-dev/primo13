@@ -1,8 +1,9 @@
-uuid: 3e33a080-eeeb-4bdc-847c-2802fef18a39
+uuid: ce1a9175-7e54-4043-969c-fdf830242e87
 langcode: fr
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.offer.full
     - field.field.offer.offer.field_description
     - field.field.offer.offer.field_image
     - field.field.offer.offer.field_offer_type
@@ -12,10 +13,10 @@ dependencies:
     - offer
     - options
     - text
-id: offer.offer.default
+id: offer.offer.full
 targetEntityType: offer
 bundle: offer
-mode: default
+mode: full
 content:
   content_moderation_control:
     settings: {  }
@@ -49,7 +50,7 @@ content:
     region: content
   field_prix:
     type: number_decimal
-    label: above
+    label: hidden
     settings:
       thousand_separator: ''
       decimal_separator: .

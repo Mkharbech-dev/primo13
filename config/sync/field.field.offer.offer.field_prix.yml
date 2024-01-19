@@ -11,8 +11,8 @@ field_name: field_prix
 entity_type: offer
 bundle: offer
 label: Prix
-description: 'Your minimum price (in €)'
-required: false
+description: 'Votre prix minimum (en €)'
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
