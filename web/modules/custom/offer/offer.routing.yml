@@ -81,3 +81,5 @@ offer.publish:
       offer:
         type: entity:offer
 
+view.offer_overview:
+  path: '/offer'

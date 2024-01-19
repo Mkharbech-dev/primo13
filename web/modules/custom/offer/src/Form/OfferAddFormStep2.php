@@ -37,4 +37,25 @@ class OfferAddFormStep2 extends ContentEntityForm {
     $form_state->setRedirect('offer.step3', ['offer' => $id]);
   }
 
+  protected function actions(array $form, FormStateInterface $form_state) {
+    $actions = parent::actions($form, $form_state);
+    $actions['go_back'] = [
+      '#type' => 'submit',
+      '#value' => $this->t('Revenir'),
+      '#submit' => ['::goBack'],
+      '#weight' => 90,
+      '#limit_validation_errors' => []
+    ];
+    if (array_key_exists('delete', $actions)) {
+      unset($actions['delete']);
+    }
+    $actions['#prefix'] = '<i>Step 2 of 3</i>';
+    return $actions;
+  }
+  public function goBack(array $form, FormStateInterface $form_state) {
+    $entity = $this->getEntity();
+    $id = $entity->id();
+    $form_state->setRedirect('offer.step1', ['offer' => $id]);
+  }
+
 }

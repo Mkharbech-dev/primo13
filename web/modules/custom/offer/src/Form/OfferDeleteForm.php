@@ -17,8 +17,8 @@ class OfferDeleteForm extends ContentEntityConfirmFormBase {
    * {@inheritdoc}
    */
   public function getQuestion() {
-    return $this->t('Are you sure you want to delete %name?',
-      array('%name' => $this->entity->label()));
+    $name = $this->entity->label();
+    return $this->t('Etes-vous sûr que vous voulez supprimer '.$name);
   }
   /**
    * {@inheritdoc}
@@ -46,7 +46,8 @@ class OfferDeleteForm extends ContentEntityConfirmFormBase {
       array(
         '%title' => $this->entity->label(),
       ));
-// Redirect to offer list after delete.
+    \Drupal::messenger()->addMessage('Votre offre a été supprimée avec succés.');
+    // Redirect to offer list after delete.
     $form_state->setRedirect('entity.offer.collection');
   }
 }
